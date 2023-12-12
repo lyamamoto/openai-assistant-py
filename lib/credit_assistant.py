@@ -9,7 +9,7 @@ class Loan:
 
     @property
     def monthlyInterestRate(self):
-        return math.pow(self.interestRate, 1 / 12)
+        return math.pow(1 + self.interestRate, 1 / 12) - 1
 
     def __init__(self, notional: float, interest: float, installments: int):
         self.notional = notional
